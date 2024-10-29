@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>BMI Calculator</title>
+</head>
+
+<body class="bg-blue-300">
+    <div class="container">
+        <div class="calcualtor flex flex-col justify-center items-center m-12">
+            <h1 class="text-2xl font-bold">BMI Calculator</h1>
+            <div class="content1">
+                <span>Enter your Age</span>
+                <input id="age" type="number" class="border-2 border-black w-64 h-10 m-4 rounded-lg"
+                    placeholder="Enter age">
+                    <div class="content2">
+                <span> Select gender: </span>
+                <select id="gender" class="border-2 border-black w-64 h-10 m-4 rounded-lg">
+                    <option id="male" value="male">Male</option>
+                    <option id="female" value="female">Female</option>
+                </select>
+            </div>
+            </div>
+            <div class="height m-4">
+                <span>Height (in feet)</span>
+                <input id="height" type="number" class="border-2 border-black rounded-lg w-64 h-10" placeholder="Feet">
+            </div>
+            <div class="weight m-4">
+                <span>Weight (in kg)</span>
+                <input id="weight" type="number" class="border-2 border-black rounded-lg w-64 h-10" placeholder="Kg">
+            </div>
+            <button onclick="calculate()" class="w-32 h-8 rounded-full border-2 m-4 border-black"> Calculate </button>
+        </div>
+        <div class="full flex flex-row justify-center items-center">
+            <p class="text-xl">BMI: <span id="result" class="font-bold text-green-800">00</span></p>
+        </div>
+    </div>
+</body>
+<script src="javascript.js"></script>
+
+</html>
